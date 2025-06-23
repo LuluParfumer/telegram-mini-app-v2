@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Telegram Mini App</title>
+  <title>Мини-приложение</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-color: #111; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <h1>Добро пожаловать!</h1>
+<body>
+  <div class="container">
+    <h1>Парфюмерная витрина</h1>
+    <div class="product">
+      <h2>Ganymede</h2>
+      <p>Унисекс аромат, древесный пряный</p>
+      <select id="volume">
+        <option value="200">3мл — 200₽</option>
+        <option value="400">6мл — 400₽</option>
+        <option value="600">10мл — 600₽</option>
+      </select>
+      <button onclick="addToCart()">Добавить в корзину</button>
+    </div>
+    <div class="cart" id="cart">
+      <h3>Корзина</h3>
+      <ul id="cart-items"></ul>
+      <p>Итого: <span id="total">0</span> ₽</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
